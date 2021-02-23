@@ -1,0 +1,97 @@
+<!--I'm an html comment! -->
+<html>
+    <head> <!-- The head contains metadata, or data which is used 
+                by the browser but isn't always visible to the user -->
+                
+        <!-- The title is an example of visible metadata, as it will
+             be displayed in the browser tab-->        
+        <title>Day 1</title>
+        <style> 
+            /* when using css in the html code, we have to use css comments */
+            body{
+                background-color: #FFA07A;  
+                padding-top:30px;
+            }
+        </style>
+        <link rel="stylesheet" href="./styles.css"> <!-- We can also include css
+                                                         from a separate file-->
+    </head>
+    <!-- This is the body section. Most things found here will be visible 
+         We're going to be talking about all these elements, feel free to
+         write more comments if something seems important!-->
+    <body>
+        <!-- Ooo a class! Look at styles.css to see the styles being used here -->
+        <div class="navigation">
+            <a href="./Day1.html" title="Link to Day 1 content">Day 1</a>
+            <a href="./Day2.html" title="Link to Day 2 content">Day 2</a>
+            <!-- Elements do not all need to be on one line!! Similar to 
+                 the comments, they use the end tag to determine when the 
+                 element specific code has ended-->
+            <a href="./links.html" title="Link to helpful links">
+                Helpful Links
+            </a>
+            <a href="fake.html">Fake Link</a>
+            <a href="">Another Fake Link</a>
+            <a>Not Even a Link</a>
+        </div>
+        
+        <div class="header">
+            <h1>Gus Guthrie</h1>
+            <h3>Junior Web Applications Developer</h3>
+            <h5>Lansing, MI</h5>
+            <button onclick="doAThing()">I'm a button and I do a thing.</button>
+        </div>
+        
+        <!-- These are self-closing elements! They do not require a self-closing
+             tag to be valid. Here's a list of them: 
+             
+             <area />, <base />, <br />, <col />, <embed />, <hr />, <img />, 
+             <input />, <link />, <meta />, <param />, <source />, <track />, <wbr />
+             -->
+        <hr/>
+        <br/>
+        
+        <!-- Our first id! Remember, each id must be UNIQUE to each html document,
+             meaning we can't go giving every element the same id. It won't throw
+             any errors until you try to use those ids in the javascript code-->
+        <div id="info">
+            <img id="image" class="info-object" src="./lulu.jpg" title="Lulu the cat"/>
+            <p id="imageDescription" class="info-object">
+                This picture on the left is a recent picture of my cat, 
+                Lulu. I have had her since June of 2020 when I adopted
+                her from a friend and college classmate who moved out of 
+                state. Her birthday is July 10th and she is currently 6
+                years old. She's not very playful or cuddly and she yells
+                a lot, but she is still an amazing cat! 
+            </p>
+        </div>
+        
+        <br/>
+        
+         <div>
+             <h3>Comments</h3>
+             <div id="commentsSection">
+                 <p id="boringComments"></p>
+             </div>
+             
+             <input id="commentInput" placeholder="Insert comment here..." type="text">
+             
+             <!-- Here's a fun fact, inputs can also be buttons! There may be 
+                  cases where this is useful, I haven't found any yet.-->
+             <input type="button" onclick="addBoringComment()" value="Add boring comment."/>
+             <button onclick="addFunComment()">Add fun comment!!</button>
+         </div>
+        
+        <!-- This is the scripts section. While in the body section of the html
+             code, they do not produce any visible elements-->
+        <script src="./scripts.js" type="text/javascript"></script>
+        <script>
+        //When writing javascript code in html, we have to use javascript comments
+        function doAThing()
+            {
+                var thingDone = true;
+                alert("Thing done = " + thingDone);
+            }
+        </script>
+    </body>
+</html>
